@@ -1,0 +1,38 @@
+default_settings: 
+  max_steps: 2e7
+  time_horizon: 1024
+behaviors:
+  MovingManyWalls:
+    trainer_type: ppo
+    hyperparameters:
+      learning_rate: 1e-2
+      beta: 1e-2
+      epsilon: 0.3
+      lambd: 0.99
+      num_epoch: 3
+env_settings:
+  env_path: null
+  env_args: null
+  base_port: 5005
+  num_envs: 1
+  seed: -1
+engine_settings:
+  width: 84
+  height: 84
+  quality_level: 5
+  time_scale: 20
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: false
+environment_parameters: null
+checkpoint_settings:
+  run_id: run1
+  load_model: false
+  resume: false
+  force: false
+  train_model: false
+  inference: false
+  results_dir: results
+torch_settings:
+  device: null
+debug: false
